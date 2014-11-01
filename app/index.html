@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -46,7 +44,7 @@
             <div class="introduction">
                 <h2>Skills
                     <a href="#" data-type="percentage" class="active skillbars-type"><i class="fa fa-star"></i> Percentage's</a>
-                    <a href="#" data-type="year" class="skillbars-type"><i class="fa fa-clock-o"></i> Jaren</a>
+                    <a href="#" data-type="year" class="skillbars-type"><i class="fa fa-clock"></i> Jaren</a>
                 </h2>
                 <p class="description">Wat ik doe en hoe goed ik dat doe.<br><br>
                 <em>Klik op de filters om te schakelen tussen percentageweergave en jaarweergave.<br>
@@ -136,18 +134,24 @@
 
         <section class="contact border-highlight-block" id="contact">
             <div class="introduction">
-                <h2>Contact</h2>
-                <p class="description">Wil je me een emailtje sturen? Vul dan onderstaand formulier in. Wanneer ik het niet te druk heb, reageer ik meestal binnen een week.</p>
-                <label>Naam</label>
-                <input id="contact--name" placeholder="Je naam" type="text">
+                <form>
+                    <h2>Contact</h2>
+                    <p class="description">Wil je me een emailtje sturen? Vul dan onderstaand formulier in. Ik probeer zo spoedig mogelijk te reageren.</p>
+                    <label>Naam</label>
+                    <input id="contact--name" placeholder="Je naam" type="text" required>
 
-                <label>Emailadres</label>
-                <input id="contact--mail" placeholder="Je emailadres" type="email">
+                    <label>Emailadres</label>
+                    <input id="contact--mail" placeholder="Je emailadres" type="email" required>
 
-                <label>Bericht</label>
-                <textarea id="contact--message" placeholder="Je bericht" rows="8"></textarea>
-
-                <a class="button send-mail" href="#">Versturen <i class="fa fa-paper-plane"></i></a>
+                    <label>Bericht</label>
+                    <textarea id="contact--message" placeholder="Je bericht" rows="8" required></textarea>
+                    <a class="button send-mail" href="#">
+                    <span class="default">Versturen <i class="fa fa-paper-plane"></i></span>
+                    <span class="sending">Bezig... <i class="fa fa-spinner fa-spin"></i></span>
+                    <span class="sent">Verstuurd! <i class="fa fa-check"></i></span>
+                    </a>
+                    <input type="submit" value="Versturen" class="hidden real-submit">
+                </form>
             </div>
         </section>
     </div>

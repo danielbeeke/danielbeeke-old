@@ -6,7 +6,7 @@
     float: left;
     width: 100%;
     text-transform: uppercase;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     line-height: 40px;
   }
 
@@ -17,7 +17,7 @@
   textarea,
   input {
     width: 100%;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     padding: 20px 0;
     box-sizing: border-box;
     border: 0;
@@ -44,6 +44,19 @@
   }
 }
 
+:invalid {
+  box-shadow: none;
+}
+
+.submitted-once {
+  textarea:invalid,
+  input[type="email"]:invalid,
+  input[type="text"]:invalid {
+    color: #e73939;
+    border-bottom: 2px solid #e73939;
+  }
+}
+
 .button  {
   padding: 20px;
   color: white;
@@ -55,6 +68,7 @@
   font-family: Kautiva;
   box-sizing: border-box;
   float: right;
+  transition: all $speed $easing;
 
   i {
     float: right;
@@ -63,4 +77,39 @@
   @media all and (max-width: 720px) {
     width: 100%;
   }
+
+  &:hover {
+    border-color: $yellow;
+  }
+
+  .sending,
+  .sent {
+    display: none;
+  }
+
+  &.sending {
+    .default,
+    .sent {
+      display: none;
+    }
+
+    .sending {
+      display: block;
+    }
+  }
+
+  &.sent {
+    .default,
+    .sending {
+      display: none;
+    }
+
+    .sent {
+      display: block;
+    }
+  }
+}
+
+.hidden {
+  display: none;
 }

@@ -15,10 +15,14 @@ section.skills {
     float: left;
     width: 100%;
     margin-bottom: 20px;
+
+    @media all and (max-width: 420px) {
+      font-size: 30px;
+    }
   }
 
   p {
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     color: white;
     font-size: 22px;
@@ -44,7 +48,6 @@ section.skills {
   background: transparent;
   min-height: $skillsHeight;
   position: relative;
-  // box-shadow: 0 2px 4px $green-light inset;
   transition: all $speed $easing;
   margin-bottom: 10px;
   cursor: pointer;
@@ -68,7 +71,7 @@ section.skills {
       height: 30px;
       line-height: 28px;
       font-size: 24px;
-      color: $purple;
+      color: black;
       text-align: center;
       border-radius: 50%;
     }
@@ -103,7 +106,7 @@ section.skills {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -74px;
+  top: -44px;
   background: $yellow;
   color: black;
   display: block;
@@ -138,11 +141,15 @@ section.skills {
 
 .skillbars-type {
   color: $gray;
-  font-size: 50%;
   text-decoration: none;
   outline: none;
   position: relative;
   transition: color $speed $easing;
+  font-size: 34px;
+
+  @media all and (max-width: 420px) {
+    font-size: 24px;
+  }
 
   &:not(:last-child):after {
     content: ' |';
@@ -153,12 +160,21 @@ section.skills {
   &.active {
     color: $yellow;
   }
+
+  @media all and (max-width: 720px) {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    &:after {
+      display: none;
+    }
+  }
 }
 
 .skill--label {
   color: white;
   text-transform: uppercase;
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   line-height: 40px;
   cursor: pointer;
   width: 100%;

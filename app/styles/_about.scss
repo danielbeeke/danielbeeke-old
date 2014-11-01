@@ -2,6 +2,7 @@
   margin-top: $sectionDistance;
   color: white;
 
+
   .avatar {
     border-radius: 50%;
     width: 56px;
@@ -23,6 +24,14 @@
     }
   }
 
+  @media all and (max-width: 420px) {
+    .avatar {
+      width: 30px;
+    }
+
+    margin-top: 20px;
+  }
+
   h2 {
     font-size: 64px;
     font-family: Kautiva;
@@ -39,7 +48,7 @@
   h1 {
     transform: translateX(0);
     transition: all $speed $easing;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 30px;
     margin: 20px 0 0;
@@ -57,6 +66,19 @@
 
     h1 {
       font-size: 22px;
+    }
+  }
+
+
+  @media all and (max-width: 420px) {
+    h2 {
+      font-size: 30px;
+      line-height: 46px;
+      margin-top: -10px;
+    }
+
+    h1 {
+      font-size: 18px;
     }
   }
 }

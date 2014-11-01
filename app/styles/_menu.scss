@@ -1,6 +1,10 @@
 section.menu {
   margin-top: 0 !important;
 
+  @media all and (max-width: 420px) {
+    display: none;
+  }
+
   a {
     margin-top: -4px;
     margin-bottom: -6px;
@@ -17,6 +21,11 @@ section.menu {
       content: '|';
       color: $gray;
       margin: 0 20px;
+
+      @media all and (max-width: 720px) {
+        margin: 0 6px;
+      }
+
     }
   }
 }
