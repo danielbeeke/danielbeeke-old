@@ -316,7 +316,6 @@ module.exports = function (grunt) {
           cwd: '<%= config.app %>',
           dest: '<%= config.dist %>',
           src: [
-            'CNAME',
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
@@ -325,6 +324,9 @@ module.exports = function (grunt) {
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
           dest: '<%= config.dist %>/.htaccess'
+        }, {
+          src: 'CNAME',
+          dest: '<%= config.dist %>/CNAME'
         }]
       },
       styles: {
