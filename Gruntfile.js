@@ -230,11 +230,11 @@ module.exports = function (grunt) {
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
       options: {
-        assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images'],
+        assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images', '<%= config.dist %>/styles'],
 
         patterns: {
             js: [
-                [/(images\/.*?\.(?:gif|jpeg|jpg|png|webp))/gm, 'Update the JS to reference our revved images']
+                [/(images\/.*?\.(?:gif|jpeg|jpg|png|webp)|styles\/.*?\.css)/gm, 'Update the JS to reference our revved images'],
             ]
         }
 
