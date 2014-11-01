@@ -52,31 +52,29 @@
         percentage: 75,
         label: 'MySQL, MariaDB'
       },
-      // vb: {
-      //   from: 2003,
-      //   till: 2007,
-      //   percentage: 40,
-      //   label: 'Visual Basic 6'
-      // },
-      // coreldraw: {
-      //   from: 2002,
-      //   till: 2006,
-      //   percentage: 60,
-      //   label: 'CorelDRAW'
-      // },
-      git: {
-        from: 2010,
-        percentage: 70,
-        label: 'GIT'
-      },
       postgresql: {
         from: 2012,
         percentage: 40,
         label: 'PostgreSQL/PostGIS'
       },
+      aegir: {
+        from: 2011,
+        percentage: 90,
+        label: 'Aegir'
+      },
+      barracuda: {
+        from: 2012,
+        percentage: 80,
+        label: 'Barracuda'
+      },
+      git: {
+        from: 2010,
+        percentage: 60,
+        label: 'GIT'
+      },
       qgis: {
         from: 2012,
-        percentage: 40,
+        percentage: 30,
         label: 'Qgis'
       },
       leaflet: {
