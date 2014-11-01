@@ -1,0 +1,66 @@
+.contact {
+
+  label {
+    color: $yellow;
+    margin-top: 30px;
+    float: left;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: Lato;
+    line-height: 40px;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  textarea,
+  input {
+    width: 100%;
+    font-family: Lato;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border: 0;
+    border-bottom: 1px solid $yellow;
+    background: transparent;
+    color: white;
+    font-size: 22px;
+  }
+
+  ::-webkit-input-placeholder {
+    font-style: italic;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    font-style: italic;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    font-style: italic;
+  }
+
+  :-ms-input-placeholder {
+    font-style: italic;
+  }
+}
+
+.button  {
+  padding: 20px;
+  color: white;
+  border: 3px solid white;
+  float: left;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: Kautiva;
+  box-sizing: border-box;
+  float: right;
+
+  i {
+    float: right;
+    margin-left: 10px;
+  }
+  @media all and (max-width: 720px) {
+    width: 100%;
+  }
+}

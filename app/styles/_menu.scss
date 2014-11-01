@@ -1,0 +1,22 @@
+section.menu {
+  margin-top: 0 !important;
+
+  a {
+    margin-top: -4px;
+    margin-bottom: -6px;
+    text-decoration: none;
+    font-family: Kautiva;
+    color: white;
+    font-size: 28px;
+    font-style: italic;
+    text-transform: lowercase;
+    font-weight: bold;
+    float: left;
+
+    &:not(:last-child):after {
+      content: '|';
+      color: $gray;
+      margin: 0 20px;
+    }
+  }
+}

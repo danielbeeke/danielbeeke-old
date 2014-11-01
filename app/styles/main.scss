@@ -1,0 +1,30 @@
+// bower:scss
+// endbower
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500);
+
+$yellow: #ffcc00;
+$green-light: #beecad;
+$green-medium: #70c19b;
+$green-dark: #32ab86;
+$purple: #4d3975;
+$gray: #999;
+
+$easing: cubic-bezier(0.480, 0.150, 0.525, 0.670);
+$speed: 0.6s;
+
+$sectionDistance: 140px;
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@import 'skills';
+@import 'about';
+@import 'layout';
+@import 'menu';
+@import 'contact';

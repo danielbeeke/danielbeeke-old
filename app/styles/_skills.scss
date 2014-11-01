@@ -1,0 +1,198 @@
+$skillsHeight: 20px;
+
+section.skills {
+  margin-top: $sectionDistance;
+}
+
+.introduction {
+  @include clearfix;
+
+  h2 {
+    color: white;
+    font-size: 56px;
+    font-family: Kautiva;
+    margin-top: -9px;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-family: Lato;
+    font-weight: 400;
+    color: white;
+    font-size: 22px;
+    margin: 0;
+    float: left;
+    width: 100%;
+  }
+}
+
+.skillbars-wrapper {
+  position: relative;
+  transition: opacity $speed $easing;
+  margin-top: 30px;
+
+  &.has-active .skill-wrapper,
+  &:hover .skill-wrapper {
+    opacity: 0.4;
+  }
+}
+
+.skill-wrapper {
+  overflow: hidden;
+  background: transparent;
+  min-height: $skillsHeight;
+  position: relative;
+  // box-shadow: 0 2px 4px $green-light inset;
+  transition: all $speed $easing;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  .skill-text {
+    overflow: hidden;
+    max-height: 0px;
+    background: rgba(white, 0.1);
+    color: white;
+    padding: 0 20px;
+    font-size: 20px;
+    border-top: $skillsHeight rgba($gray, 0.3) solid;
+    transition: all $speed $easing;
+
+    h2:after {
+      content: '×';
+      float: right;
+      margin-right: 0;
+      background: $gray;
+      width: 30px;
+      height: 30px;
+      line-height: 28px;
+      font-size: 24px;
+      color: $purple;
+      text-align: center;
+      border-radius: 50%;
+    }
+  }
+
+  .bar {
+    background: $yellow;
+    position: absolute;
+    width: 100%;
+    height: $skillsHeight;
+    transition: all $speed $easing;
+  }
+
+  &.active,
+  &:hover {
+    opacity: 1 !important;
+    overflow: visible;
+  }
+
+  &.active {
+    height: auto;
+
+    .skill-text {
+      max-height: 700px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+
+.percentage-tooltip, .year-tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -74px;
+  background: $yellow;
+  color: black;
+  display: block;
+  padding: 5px;
+  z-index: 4;
+  opacity: 0;
+  border: 1px solid $yellow;
+  transition: opacity $speed $easing;
+  font-size: 12px;
+  z-index: 2;
+
+  &:after {
+    content: '▼';
+    color: $yellow;
+    position: absolute;
+    top: 21px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.year-tooltip.first-year, .year-tooltip.last-year,
+.percentage-tooltip.first-percentage, .percentage-tooltip.last-percentage {
+  background: $gray;
+  border-color: $gray;
+  z-index: 1;
+  color: black;
+  &:after {
+    color: $gray;
+  }
+}
+
+.skillbars-type {
+  color: $gray;
+  font-size: 50%;
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  transition: color $speed $easing;
+
+  &:not(:last-child):after {
+    content: ' |';
+    color: $gray;
+    font-weight: 100;
+  }
+
+  &.active {
+    color: $yellow;
+  }
+}
+
+.skill--label {
+  color: white;
+  text-transform: uppercase;
+  font-family: Lato;
+  line-height: 40px;
+  cursor: pointer;
+  width: 100%;
+  display: inline-block;
+}
+
+.year-grid, .percentage-grid {
+  height: $skillsHeight;
+  width: 1px;
+  background: black;
+  position: absolute;
+  opacity: 0;
+  transition: opacity $speed $easing;
+  top: 0px;
+}
+
+.skillbars-wrapper[data-type="percentage"] {
+  .percentage-grid {
+    opacity: 0.5;
+  }
+
+  .skill-wrapper.active .percentage-tooltip,
+  .skill-wrapper:hover .percentage-tooltip {
+    opacity: 1;
+  }
+}
+
+.skillbars-wrapper[data-type="year"] {
+  .year-grid {
+    opacity: 0.5;
+  }
+
+  .skill-wrapper.active .year-tooltip,
+  .skill-wrapper:hover .year-tooltip {
+    opacity: 1;
+  }
+}
